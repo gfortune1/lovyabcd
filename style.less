@@ -1,20 +1,123 @@
 // Color variables (appears count calculates by raw css)
-@color0: #333333; // Appears 2 times
+@color0: #dddddd; // Appears 2 times
 
 
 
-.combo {
-	border: 1px solid red;
-	color: @color0;
-	.marked {
-		font-weight: bold;
+* {
+	box-sizing: border-box;
+}
+ 
+	&:root {
+		--main-Col2: #0C2461;
+		--main-Col: #3C48C6;
+		--main-col3: white;
+		--main-col4: black;
+	}
+
+body {
+	color: white;
+	font-family: Arial;
+	margin: 0;
+}
+.header {
+	background: var(--main-Col);
+	color: white;
+	padding: 60px;
+	text-align: center;
+}
+input[type="text"] {
+	border-radius: 4px;
+	border: 1px solid grey;
+	padding: 10px;
+}
+button {
+	border-radius: 4px;
+	border: 1px solid grey;
+	padding: 10px;
+}
+.img {
+	display: block margin-left; auto margin-right; auto Width: 50%;
+	.main {
+		background-color: rgb(e, 151 230);
+		flex: 70%;
+		padding: 20px;
 	}
 }
-p {
-	border: 1px solid red;
-	color: @color0;
-	font-size: 200px;
-	.marked {
-		font-weight: bold;
+.navbar {
+	background-color: #333333;
+	background-color: var(--main-Col2);
+	display: flex;
+	display: flex;
+	a {
+		color: white;
+		padding: 14px 20px;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		&:hover {
+			background-color: @color0;
+			color: var(--main-col4);
+		}
 	}
+}
+.center {
+	flex-wrap: wrap;
+}
+.side {
+	background-color: #f1f1f1;
+	flex: 30%;
+	padding: 20px;
+}
+.fakeimg {
+	background-color: #aaaaaa;
+	padding: 20px;
+	width: 100%;
+}
+.footer {
+	background: @color0;
+	padding: 20px;
+	text-align: center;
+}
+@media {
+	screen {
+		and {
+			(max-width 
+				&:700px) {
+					.row, .navbar { flex-direction: column;
+				}
+			}
+		}
+	}
+}
+.container {
+	color: black;
+	padding-top: 80px;
+	position: relative;
+	text-align: center;
+}
+.bottom-left {
+	bottom: 8px;
+	left: 16px;
+	position: absolute;
+}
+.top-left {
+	left: 16px;
+	position: absolute;
+	top: 8px;
+}
+.top-right {
+	position: absolute;
+	right: 16px;
+	top: 8px;
+}
+.bottom-right {
+	bottom: 8px;
+	position: absolute;
+	right: 16px;
+}
+.centered {
+	left: 50%;
+	position: absolute;
+	top: 50px;
+	transform: translate(-50%, -50%);
 }
